@@ -4,7 +4,7 @@ A high-performance tool to convert Autel thermal JPG images (from EVO II Dual, D
 
 This project wraps the official Autel `IrTempParser` SDK in a C++ Shared Library (`.dll`) and provides a Python interface for batch processing.
 
----\n
+---
 ## 🚀 Features
 
 *   **Hybrid 4-Channel TIFF**:
@@ -15,14 +15,14 @@ This project wraps the official Autel `IrTempParser` SDK in a C++ Shared Library
 *   **Performance**: C++ core for fast image processing, Python for ease of use.
 *   **Batch Processing**: Convert single files or entire folders.
 
----\n
+---
 ## 🛠️ Requirements
 
 *   **OS**: Windows 10/11 (64-bit)
 *   **Python**: 3.8+
 *   **Input**: Autel Thermal JPGs (`640x512` resolution recommended).
 
----\n
+---
 ## 📦 Installation & Build
 
 ### 1. Prerequisites
@@ -40,7 +40,7 @@ cd ..
 ```
 *Make sure `ir_converter.dll`, `AutelIrTempParserSDK.dll`, and `opencv_worldXXXX.dll` are in `build/Release/`.*
 
----\n
+---
 ## 💻 Usage
 
 ### Command Line
@@ -65,7 +65,7 @@ python thermal_converter.py images/ output_tifs/
 *   Converts all JPGs in `images/` to `output_tifs/`
 *   Creates `output_tifs/dataset_metadata.json` (aggregated metadata)
 
----\n
+---
 ## 🌡️ Temperature Decoding (Band 4)
 
 The thermal data (Band 4) is encoded as a **16-bit Unsigned Integer** to maximize compatibility with photogrammetry software (e.g., Metashape, ODMs) while preserving decimal precision and handling negative temperatures.
@@ -84,12 +84,12 @@ $$ Temperature°C = \frac{PixelValue - 10000}{100.0} $$
 | 23.45 | 12345 |
 | 100.00 | 20000 |
 
----\n
+---
 ## 📄 API Documentation
 
 For advanced integration (using the DLL directly in C# or C++), see [DLL_USAGE.md](DLL_USAGE.md).
 
----\n
+---
 ## 📜 License
 MIT License.
 *Note: This project relies on the proprietary Autel Robotics IrTempParser SDK.*
