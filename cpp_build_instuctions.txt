@@ -1,0 +1,23 @@
+# Navigate to your project
+cd D:\S\ANTS\Code\jpg_to_thermal_converter
+
+# Create build directory
+mkdir build
+cd build
+
+# Configure with CMake (Release mode recommended)
+cmake -G "Visual Studio 17 2022" -A x64 `
+  -DOpenCV_DIR="C:/opencv/build" `
+  -DCMAKE_BUILD_TYPE=Release ..
+
+# Build
+cmake --build . --config Release
+
+cd build/Release
+
+# Basic usage: process all JPGs in ../images → save to ../output_tifs
+.\batch_ir2tif.exe "..\..\images" "..\..\output_tifs"
+
+.\batch_ir2tif.exe "D:\test\thermal.jpg" "D:\test\output.tif"
+
+pyinstaller --onefile --windowed --name "ThermalConverter"
