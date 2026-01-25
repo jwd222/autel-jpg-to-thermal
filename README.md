@@ -5,6 +5,13 @@ A high-performance tool to convert Autel thermal JPG images (from EVO II Dual, D
 This project wraps the official Autel `IrTempParser` SDK in a C++ Shared Library (`.dll`) and provides a Python interface for batch processing.
 
 ---
+## 📂 Project Structure
+
+*   `thermal_converter.py`: **Main Entry Point**. Python script to convert images using the DLL.
+*   `src/lib_ir_converter.cpp`: C++ source code for `ir_converter.dll`.
+*   `include/`: Header files for the Autel SDK.
+*   `old_files/`: Legacy tools (GUI, standalone EXE, ExifTool scripts) that are no longer supported in the main workflow.
+
 ## 🚀 Features
 
 *   **Hybrid 4-Channel TIFF**:
