@@ -6,3 +6,16 @@
 
 # .vscode settings
 /.vscode/
+
+# other temporary files
+*.log
+*.tmp
+*.pyc
+__pycache__/
+
+# image files
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
