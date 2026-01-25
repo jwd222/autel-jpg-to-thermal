@@ -3,3 +3,6 @@
 
 # .egg-info directories
 /*.egg-info
+
+# .vscode settings
+/.vscode/
